@@ -1,0 +1,18 @@
+{
+  "HarmonyId": "maxdistructo.RankedUtils",
+  "DisplayName": "RankedUtils",
+  "Authors": [ "MaxDistructo" ],
+  "Description": "Tweaks to Ranked that should be in the game but are not.",
+  "Version": "1.0.0",
+  "RequiredMods": [],
+  "Settings": {
+    "CheckboxSettings": [
+      {
+        "Name": "Use for all Game Modes",
+        "Description": "This was suggested by a crazy person but toggles the mod to work on ALL gamemodes, not just Ranked.",
+        "DefaultValue": false,
+        "AvailableInGame": false
+      }
+    ]
+  }
+}
