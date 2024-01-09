@@ -1,4 +1,5 @@
-﻿using SML;
+﻿using RankedUtils.EloViewer;
+using SML;
 
 namespace RankedUtils;
 
@@ -8,12 +9,23 @@ public class Main
     public static void Start()
     {
         System.Console.WriteLine("[RankedUtils] RankedSnobs");
+        State.Init();
     }
 }
 
-public class ModInfo
+[Mod.SalemMenuItem]
+public class SalemMenuButtons
 {
-    public const string PLUGIN_GUID = "RankedUtils";
-    public const string PLUGIN_NAME = "RankedUtils";
-    public const string PLUGIN_VERSION = "1.0.0";
+    public static Mod.SalemMenuButton menuButton1 = new()
+    {
+        Label = "General Stats",
+        Icon = State.sprite,
+        OnClick = () => Buttons.ShowStatsMessage("General Stats", State.userStatistics.getGeneralStatisticsString())
+    };
+    public static Mod.SalemMenuButton menuButton2 = new()
+    {
+        Label = "Ranked Stats",
+        Icon = State.sprite,
+        OnClick = () => Buttons.ShowStatsMessage("Ranked Stats", State.userStatistics.getRankedInformationString())
+    };
 }

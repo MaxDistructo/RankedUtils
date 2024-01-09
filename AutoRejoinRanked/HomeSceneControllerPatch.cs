@@ -24,6 +24,7 @@ namespace RankedUtils.AutoRejoinRanked
                 State.setLastGameMode(GameType.None);
                 //Let AutoAcceptRanked take over from here in the RankedQueueController
             }
+            State.homeSceneController = __instance;
         }
     }
 }

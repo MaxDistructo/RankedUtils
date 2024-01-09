@@ -1,6 +1,8 @@
-﻿using Home.Messages.Incoming;
-using Server.Shared.Info;
+﻿using Server.Shared.Info;
 using RankedUtils.EloViewer;
+using Home.HomeScene;
+using System.Runtime.CompilerServices;
+using SML;
 
 namespace RankedUtils
 {
@@ -10,12 +12,15 @@ namespace RankedUtils
         private static GameType lastGameMode;
         public static bool hasRegisteredAction = false;
         public static UserStatistics userStatistics = new UserStatistics();
+        public static HomeSceneController homeSceneController = null;
+        public static UnityEngine.Sprite sprite;
         public static void Init()
         {
             if (!isInitalized)
             {
                 isInitalized = true;
                 lastGameMode = GameType.None;
+                sprite = FromResources.LoadSprite("RankedUtils._modinfo.RankedUtils.resources.images.thumbnail.png");
             }
         }
         public static GameType getLastGameMode() { return lastGameMode; }

@@ -9,16 +9,17 @@ namespace RankedUtils.EloViewer
         public TextMeshProUGUI title;
         public TextMeshProUGUI message;
 
-        public void ShowPopup(string message) 
+        public void ShowPopup(string title, string message) 
         {
             this.gameObject.SetActive(true);
-            this.title.SetText("Ranked Profile");
+            this.title.SetText(title);
             this.message.SetText(message);
         }
 
         public void HandleOnCloseButtonClick()
         {
             this.PlaySound("Audio/UI/ClickSound.wav");
+            this.Close();
         }
 
         public void Close() => UnityEngine.Object.Destroy((UnityEngine.Object)this.gameObject);

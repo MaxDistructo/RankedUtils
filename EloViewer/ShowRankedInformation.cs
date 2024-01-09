@@ -17,10 +17,10 @@ using System.Threading.Tasks;
 namespace RankedUtils.EloViewer
 {
     //Another HomeSceneController patch? YUP! Set the ranked information for the user to show in the Ranked text.
-    [HarmonyPatch(typeof(HomeSceneController), "SetSelectedGameMode")]
+    //[HarmonyPatch(typeof(HomeSceneController), "SetSelectedGameMode")]
     public class ShowRankedInformation
     {
-        [HarmonyPrefix]
+        //[HarmonyPrefix]
         public static bool Prefix(HomeSceneController __instance, GameType a_gameType, ref GameType ___gameModeSelection)
         {
                 //THIS IS NOT CUSTOM BUT FROM THE ORIGINAL METHOD!!!!! REQUIRED FOR US TO TAKE OVER THE GAME TEXT!
